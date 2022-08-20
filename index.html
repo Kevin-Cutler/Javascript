@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMC Stock Predicted Prices</title>
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="bg-dark"> 
+    <div class="wrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">AMC Stock Predicted Prices</a>
+        </nav>
+    </div>
+
+    <div class="jumbotron" >
+        <h1>AMC Stock Predicted Prices</h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+
+                <h3>AMC <small>Predicted Closing Prices</small></h3>
+                
+
+    </div>
+
+    
+    <div class="col-md-8">
+        
+        <p>
+        AMC predicted stock prices are displayed below were produced using a LSTM - (Long Short-Term Memory) Neural Network Model.
+            
+            <br /><a href="chartindex.html">Visit our Graph of Predicted Close Future Prices</a><br />
+
+            <br /><br />
+            
+            <br /><br />
+
+        </p>
+        
+    </div>
+</div>
+</div>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-3">
+            <form class="bg-dark">
+                <p>Filter Search</p>
+            </form>
+     <script>
+
+
+     
+
+     </script>   
+
+    <ul class="list-group" class="bg-dark">
+        <li class="list-group-item bg-dark">
+            
+            <label for="Future_Date">Enter Date</label>
+            <input type="text" placeholder="1/10/2010" id="Future_Date" />
+            <hr>
+
+            <li class="list-group-item bg-dark">
+                <label for="Predicted_Close">Predicted Close</label>
+                <input type="text" id="Predicted_Close"/>
+            </li>
+
+            <hr>
+
+            <table class="table table-bordered"></table>
+            <!-- <thead>
+            <tr>
+                <th>Max Predicted Price Date</th>
+                <th>Max Predicted Price</th>
+                <th>Max Predicted Price Day</th>
+              </tr>
+            </thead> -->
+
+            <hr>
+            <tbody>
+                <tr>
+            <label for="Predicted_Close">Max Predicted Close</label>
+            <td><p  id="jsd-variable"></p></td>
+            <td><p id="js-variable" ></p></td>
+             <td><p id="jsday-variable" ></p></td>
+
+            </tr>
+            <hr>
+            <tr>
+            <label for="Predicted_Close">Min Predicted Close</label>
+            <p id="jwsd-variable"></p>
+            <p id="jws-variable"></p>
+            <p id="jwsday-variable"></p>
+        </tr>
+    </tbody>
+            </table>
+
+            <!-- <input type="text" id="js-variable" />
+            <input id="js-variable" type="text" /> -->
+            
+            <!-- <ul id="js-variable"></ul> -->
+    
+            
+        </li>
+
+        <li class="list-group-item bg-dark">
+            <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+        </li>
+    </ul>
+</div>
+    <div class="col-md-9">
+    <table class="table table-striped">
+        <thead>
+        <tr>      
+           <!-- <th>Date</th> -->
+           <!--   <th>City</th> -->
+            <!--  <th>State</th> -->
+             <!-- <th>Country</th> -->
+            <!--  <th>Shape</th> -->
+            <!--  <th>Duration</th> -->
+             <!-- <th>Comments</th> -->
+
+            <th>Future Date</th>
+            <th>Predicted Close</th>
+            <th>Day of The Week</th>
+            <!-- <th>DayofWk</th>-->
+        </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+    </div>
+</div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/AMC_Future.js"></script>
+    <script src="static/js/app.js"></script>
+   
+        
+</body>
+
+
+</html>

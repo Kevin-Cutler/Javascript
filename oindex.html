@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+    
+<head>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <canvas id="myChart" width="400" height = "400"></canvas>
+ 
+    
+
+
+</head>
+<body>
+    <script>         
+    // chartIt(); 
+
+// async function chartIt() {
+
+// }      
+// await getData();
+    getData();
+
+                const xlabels = [];
+                const ylabels = [];
+   
+                async function getData(){
+           
+           
+            
+            const response = await fetch ('AMC_Future.csv');
+            
+            const data = await response.text();
+            
+
+            const table =data.split('\n');
+            table.forEach(row=> {
+                const columns = row.split(',');
+                const year = columns[0];
+                xlabels.push(year)
+                const Close_Price = columns[1];
+                ylabels.push(Close_Price)
+                console.log(year, Close_Price );
+            });
+            }
+       
+
+            </script>
+
+            <script>
+               
+              
+              
+                const data = {
+                  labels: xlabels,
+                  datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: ylabels,
+                  }]
+                };
+           
+                const config = {
+                  type: 'line',
+                  data: data,
+                  options: {}
+                };
+
+           
+              </script>
+          <div>
+           
+          </div>     
+       
+</body>
+ 
+    <script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+
+  </script>
+
+
+
+<div>
+ 
+</div>
+</html>
+
